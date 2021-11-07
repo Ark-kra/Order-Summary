@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap");
+
+:root {
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-family: "Red Hat Display", sans-serif;
+	background-color: var(--pale-blue);
+	overflow: hidden;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	width: 370px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.pattern {
+	background: url(/images/pattern-background-mobile.svg) no-repeat center/cover;
+	height: 300px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.hero-img {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	width: 370px;
+	margin-bottom: 30px;
+}
+
+h1 {
+	font-size: 1.6rem;
+	color: var(--dark-blue);
+	margin-bottom: 20px;
+}
+p {
+	text-align: center;
+	font-size: 16px;
+	color: var(--desaturated-blue);
+	margin-bottom: 20px;
+}
+
+.price-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--very-pale-blue);
+	width: 100%;
+	padding: 20px;
+	border-radius: 10px;
+}
+.m-p {
+	display: flex;
+	align-items: center;
+}
+.plan {
+	color: var(--dark-blue);
+}
+.music-icon {
+	margin-right: 20px;
+}
+.price {
+	color: var(--desaturated-blue);
+}
+.price-section a {
+	color: var(--bright-blue);
+	font-weight: bold;
+}
+
+button {
+	font-family: inherit;
+	font-weight: bold;
+}
+.payment {
+	background-color: var(--bright-blue);
+	border: none;
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 20px;
+	width: 100%;
+}
+.cancel {
+	border: none;
+	background-color: white;
+	color: var(--desaturated-blue);
+	margin: 20px 0 30px 0;
+}
+.payment:hover,
+.price-section a:hover {
+	opacity: 0.8;
+}
+.cancel:hover {
+	color: var(--dark-blue);
+}
+
+@media (max-width: 600px) {
+	.pattern {
+		background: url(/images/pattern-background-desktop.svg) no-repeat
+			center/cover;
+	}
+}
+
+.payment,
+.cancel,
+a {
+	cursor: pointer;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 53%, 29%);
+}
